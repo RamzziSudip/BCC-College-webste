@@ -1,0 +1,1 @@
+{"version":3,"sources":["script.js"],"names":["particlesJS","load"],"mappings":"AAAA,aAAAA,YAAYC,KAAK,eAAgB","file":"script.js","sourcesContent":["particlesJS.load(\"particles-js\", \"assets/particles.json\");\r\n"]}
