@@ -38,7 +38,9 @@ header {
     #icon_footer {
       justify-self: end;
     }
-
+    #icon_footer {
+      padding-right: 10px;
+    }
     @include breakpoint-down(medium) {
       column-gap: rem(10);
       grid-template-columns: 15% 85%;
