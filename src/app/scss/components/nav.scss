@@ -47,24 +47,25 @@ nav {
   position: absolute;
   width: 150px;
   font-size: 12px;
-  // -webkit-box-shadow: none;
-  // -moz-box-shadow: none;
-  // box-shadow: none;
   // display: none;
   // opacity: 0;
   // visibility: hidden;
-  border: rem(2) outset var(--pale-green);
+  border: rem(2) solid var(--pale-green);
   border-radius: 0px 20px 20px 20px;
   background: var(--deep-green);
   li {
     padding-block: rem(10);
+    border: 1px none;
+    border-radius: 0px 10px 10px 10px;
     display: block;
     color: var(--cream-white);
+    transition: all 250ms ease-in-out;
     i {
       padding-inline: rem(10);
     }
-  }
-  li:hover {
-    background: var(--pale-green);
+    &:hover {
+      transform: scale(1.5);
+      background: var(--pale-green);
+    }
   }
 }

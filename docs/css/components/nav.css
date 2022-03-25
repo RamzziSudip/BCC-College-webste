@@ -41,18 +41,22 @@ nav .nav-links a:hover:before {
   position: absolute;
   width: 150px;
   font-size: 12px;
-  border: 0.125rem outset var(--pale-green);
+  border: 0.125rem solid var(--pale-green);
   border-radius: 0px 20px 20px 20px;
   background: var(--deep-green);
 }
 .nav__menus li {
   padding-block: 0.625rem;
+  border: 1px none;
+  border-radius: 0px 10px 10px 10px;
   display: block;
   color: var(--cream-white);
+  transition: all 250ms ease-in-out;
 }
 .nav__menus li i {
   padding-inline: 0.625rem;
 }
 .nav__menus li:hover {
+  transform: scale(1.5);
   background: var(--pale-green);
 }
