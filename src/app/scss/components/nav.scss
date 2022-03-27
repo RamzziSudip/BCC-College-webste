@@ -17,27 +17,19 @@ nav {
     z-index: 2;
     top: 11px;
     a {
-      color: var(--pale-green);
+      color: var(--cream-white);
       text-decoration: none;
       font-size: rem(20);
+      transition: all 250ms ease-in-out;
     }
-    a:before {
-      position: absolute;
-      color: var(--cream-white);
-      overflow: hidden;
-      content: attr(alt);
-      transition: all 0.5s;
-      transform: scale(1.2);
-      opacity: 0;
-    }
-    a:hover:before {
-      transform: scale(1);
-      opacity: 1;
-    }
-    a:hover ul {
-      transform: scale(1, 1);
-      li {
-        opacity: 1;
+    a:hover {
+      color: var(--virgin-green);
+      transform: translateY(-0.25em);
+      ul {
+        transform: scale(1, 1);
+        li {
+          opacity: 1;
+        }
       }
     }
   }
