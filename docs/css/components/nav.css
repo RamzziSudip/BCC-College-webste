@@ -34,13 +34,22 @@ nav .nav-links a:hover:before {
   transform: scale(1);
   opacity: 1;
 }
+nav .nav-links a:hover ul {
+  transform: scale(1, 1);
+}
+nav .nav-links a:hover ul li {
+  opacity: 1;
+}
 
 .nav__menus {
-  margin-block: 0.3125rem;
+  margin-block: 0.125rem;
   padding: 0;
   position: absolute;
   width: 150px;
   font-size: 12px;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 250ms ease-in-out;
   border: 0.125rem solid var(--pale-green);
   border-radius: 0px 20px 20px 20px;
   background: var(--deep-green);
@@ -51,12 +60,13 @@ nav .nav-links a:hover:before {
   border-radius: 0px 10px 10px 10px;
   display: block;
   color: var(--cream-white);
-  transition: all 250ms ease-in-out;
+  opacity: 0;
+  transition: all 250ms ease-in-out, opacity 250ms ease-in-out 150ms;
 }
 .nav__menus li i {
   padding-inline: 0.625rem;
 }
 .nav__menus li:hover {
   transform: scale(1.5);
-  background: var(--pale-green);
+  background-color: rgba(111, 179, 184, 0.8);
 }
