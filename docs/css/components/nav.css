@@ -1,44 +1,53 @@
-nav {
+.nav {
   background-color: var(--deep-green);
   box-shadow: 0px 8px 15px 4px rgba(0, 0, 0, 0.24);
   height: 7vh;
   margin-top: 0.125rem;
 }
-nav .nav-links {
+.nav__menu {
   display: flex;
   position: relative;
   margin: auto;
   width: 80%;
   height: 60%;
+  z-index: 2;
   justify-content: space-evenly;
   align-items: center;
   list-style: none;
-  z-index: 2;
   top: 11px;
 }
-nav .nav-links a {
+.nav__menu span {
   color: var(--cream-white);
   text-decoration: none;
   font-size: 1.25rem;
   transition: all 250ms ease-in-out;
 }
-nav .nav-links a:hover {
+.nav__menu span:hover {
   color: var(--virgin-green);
   transform: translateY(-0.25em);
 }
-nav .nav-links a:hover ul {
+.nav__menu span:hover .sub-menus {
   transform: scale(1, 1);
 }
-nav .nav-links a:hover ul li {
+.nav__menu span:hover .sub-menus a {
   opacity: 1;
 }
+.nav #hamburger {
+  display: none;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 39.9375em) {
+  .nav #hamburger {
+    display: inline-flex;
+  }
+}
 
-.nav__menus {
+.sub-menus {
   margin-block: 0.125rem;
   padding: 0;
   position: absolute;
   width: 150px;
-  font-size: 12px;
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 250ms ease-in-out;
@@ -46,7 +55,7 @@ nav .nav-links a:hover ul li {
   border-radius: 0px 20px 20px 20px;
   background: var(--deep-green);
 }
-.nav__menus li {
+.sub-menus a {
   padding-block: 0.625rem;
   border: 1px none;
   border-radius: 0px 10px 10px 10px;
@@ -55,10 +64,13 @@ nav .nav-links a:hover ul li {
   opacity: 0;
   transition: all 250ms ease-in-out, opacity 250ms ease-in-out 150ms;
 }
-.nav__menus li i {
+.sub-menus a i {
   padding-inline: 0.625rem;
 }
-.nav__menus li:hover {
+.sub-menus a span {
+  font-size: 0.75rem;
+}
+.sub-menus a:hover {
   transform: scale(1.5);
   background-color: rgba(111, 179, 184, 0.8);
 }
