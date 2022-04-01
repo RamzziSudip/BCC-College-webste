@@ -185,6 +185,10 @@ header #text-box #icon_footer {
   }
 }
 @media (max-width: 39.9375em) {
+  header #text-box > h1 {
+    font-size: 1.5625rem;
+    text-align: center;
+  }
   header {
     height: 4.375rem;
   }
@@ -193,20 +197,17 @@ header #text-box #icon_footer {
 .nav {
   background-color: var(--deep-green);
   box-shadow: 0px 8px 15px 4px rgba(0, 0, 0, 0.24);
-  height: 7vh;
-  margin-top: 0.125rem;
 }
 .nav__menu {
   display: flex;
   position: relative;
   margin: auto;
   width: 80%;
-  height: 60%;
+  height: 7vh;
   z-index: 2;
   justify-content: space-evenly;
   align-items: center;
   list-style: none;
-  top: 11px;
 }
 .nav__menu span {
   color: var(--cream-white);
@@ -224,15 +225,38 @@ header #text-box #icon_footer {
 .nav__menu span:hover .sub-menus a {
   opacity: 1;
 }
-.nav #hamburger {
-  display: none;
-  position: relative;
+.nav .trigger {
+  position: fixed;
   z-index: 2;
 }
-@media (max-width: 39.9375em) {
-  .nav #hamburger {
-    display: inline-flex;
-  }
+.nav .ham {
+  width: 80px;
+  cursor: pointer;
+}
+.nav .ham .line {
+  fill: none;
+  stroke: var(--cream-white);
+  stroke-width: 4;
+  stroke-linecap: square;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+}
+.nav .ham .line.top {
+  stroke-dasharray: 40 172;
+}
+.nav .ham .line.middle {
+  stroke-dasharray: 40 111;
+}
+.nav .ham .line.bottom {
+  stroke-dasharray: 40 172;
+}
+.nav .ham.active .top {
+  stroke-dashoffset: -132px;
+}
+.nav .ham.active .middle {
+  stroke-dashoffset: -71px;
+}
+.nav .ham.active .bottom {
+  stroke-dashoffset: -132px;
 }
 
 .sub-menus {
