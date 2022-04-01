@@ -185,10 +185,6 @@ header #text-box #icon_footer {
   }
 }
 @media (max-width: 39.9375em) {
-  header #text-box > h1 {
-    font-size: 1.5625rem;
-    text-align: center;
-  }
   header {
     height: 4.375rem;
   }
