@@ -34,11 +34,14 @@
     }
   }
 
-  @include breakpoint-down(small) {
+  @include breakpoint-down(xsmall) {
     transition: all 350ms ease-in-out;
     -webkit-transition: all 350ms ease-in-out;
     transform: scale(0, 1);
     transform-origin: top;
+    span{
+      font-size: rem(25);
+    }
     &__menu{
       flex-direction: column;
       height: 40vh;
@@ -58,7 +61,7 @@
   visibility: hidden;
   position: fixed;
   z-index: 4;
-  @include breakpoint-down(small) {
+  @include breakpoint-down(xsmall) {
     visibility: inherit;
   }
 }
